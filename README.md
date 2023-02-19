@@ -1,4 +1,4 @@
-# exam-generator
+# Exam.ly
 
 ## Running
 1. run `pip -r install requirements.txt`
