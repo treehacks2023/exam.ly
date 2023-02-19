@@ -1,0 +1,5 @@
+Flask==2.0.3
+openai==0.26.5
+PyPDF2==3.0.1
+python-dotenv==0.21.1
+Werkzeug==2.0.3
