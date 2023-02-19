@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8" />
+        <title>Exam Generator</title>
+    
+        <link rel="stylesheet" href="/static/styles/mainpage.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+    </head>
+    <div class="container">
+        <h2 class="text-center mb-4">Exam Generator</h2>
+          <div class="row justify-content-center">
+            <div class="col-sm-4">
+             <div class="card">
+              <div class="row justify-content-center">
+                <div class="card-body">
+                  <form action="/upload" method="post" enctype="multipart/form-data">
+                <p class="card-text"> Select previous paper(s)</p>
+                    <input type="file" name="file" value="file" multiple/>
+                    <hr>
+                    <input type="submit" name="upload" value="Upload" class="button">
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+</html>
+</html>

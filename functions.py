@@ -11,7 +11,7 @@ def merge_files(filenames:list, merged_filename:str):
   merger.close()
 
 def add_prompt(text_file:str):
-  prompt_intro='Generate sample questions for and exam based on the following text, in the format of 1., 2. etc. Do not add answers:'
+  prompt_intro='Generate new questions based on the following questions, in the format of 1., 2. etc. Do not answer them:'
   final_query=prompt_intro+'\n'+text_file
   return final_query
 

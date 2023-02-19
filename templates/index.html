@@ -11,6 +11,8 @@
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!-- Fonts and icons -->
+  <link rel="stylesheet" href="/static/styles/mainpage.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
   <!-- CSS Files -->
@@ -27,41 +29,44 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
 
-<body>
-  <div class="navbar">
-      <h2> </h2>
-  </div>
-  <hr>
- 
+<body class="gradient">
 
-  <div class="container">
-   <h2 class="text-center mb-4">Exam Generator</h2>
-    <div class="row justify-content-center">
-      <div class="col-sm-4">
-        <div class="card">
-          <div class="card-body">
-      <form action="/upload" method="post" enctype="multipart/form-data">
-      <p class="card-text">Choose a previous paper(s)</p>
-        <input type="file" name="file" value="file" multiple/>
-        <hr>
-      <input type="submit" name="upload" value="Upload" class="btn btn-success">
-      </form>
-      
-    </div>
-  </div>
-  </div>
-  <ul>
-    <ol type="1">
-      {% for item in response %}
-      <li>{{ item }}</li>
-      {% endfor %}
-    </ol>
-  </ul>
-</div>
-</div>
-
-
-
+  <div class="main__content">
+    <h2 class="text-center mb-4">Exam.ly</h2>
+      <div class="row justify-content-center">
+        <div class="col-sm-4">
+         <div class="card">
+          <div class="row justify-content-center">
+            <div class="card-body">
+              <form action="/upload" method="post" enctype="multipart/form-data">
+                <div class="row justify-content-center">
+                  <p class="card-text"> Select previous paper(s)</p>
+                </div>
+                <!-- <input type="file" name="file" value="file" multiple/> -->
+                <div class="row justify-content-center">
+                  <label>
+                    <img src="/static/img/icon.png">
+                    <input type="file" name="file" value="file" style="display:none" multiple>
+                  </label>
+                </div>
+                <hr>
+                <div class="row justify-content-center">
+                  <input type="submit" name="upload" value="Upload" class="button">
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="row justify-content-center"></div>
+            <ul>
+              <ol type="1">
+                {% for item in response %}
+                <li>{{ item }}</li>
+                {% endfor %}
+              </ol>
+            </ul>
+          </div>
+        </div>
+      </div>
 
 </body>
 
